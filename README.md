@@ -10,5 +10,6 @@ https://www.kaggle.com/code/utkarshsaxenadn/car-price-prediction-eda-ml-models-r
 Download the folder in Zip format, unzip it and open the command prompt. Make sure that you have Django installed.
 After opening the command prompt, run the below command:
 
+```
 python ./manage.py runserver
-
+```
