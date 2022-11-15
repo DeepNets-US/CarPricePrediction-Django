@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <!-- <link rel="stylesheet" href="templates\style.css"> -->
+    <style>
+
+        /* Top Part */
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .banner {
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            position: fixed;
+            text-align: center;
+            background-color: royalblue;
+        }
+
+        .banner h1 {
+            display: inline-block;
+            border: 5px solid white;
+            border-radius: 50px;
+            font-size: 30px;
+            letter-spacing: 5px;
+            color: white;
+            padding: 5px;
+            width: 30%;
+        }
+
+        main {
+            margin-top: 120px;
+            margin-bottom: 50px;
+        }
+
+        .main {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            box-shadow: 10px 10px 5px gray;
+            border: 5px solid royalblue;
+        }
+
+        /* Middle Part */
+        .main {
+            border-radius: 50px;
+            padding: 10px;
+        }
+
+        form{
+            margin: 20px;
+        }
+        .main form label {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+        .main form input[type='text'] {
+            width: 100%;
+            height: 30px;
+            border-radius: 20px;
+            border: 5px solid royalblue;
+            margin: 10px 0px;
+            padding: 5px;
+            font-size: 20px;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .button button {
+            margin: 12px 40%;
+            font-size: 25px;
+            width: 25%;
+            padding: 10px;
+            border: 5px solid royalblue;
+            border-radius: 20px;
+            color: white;
+            background-color: royalblue;
+        }
+
+        /* Prediction Part */
+        .prediction {
+            font-size: 20px;
+            text-align: center;
+            background-color: royalblue;
+            padding: 5px;
+            color: white;
+        }
+
+        /* Pseudo Classes */
+        .main form input[type='text']:hover {
+            cursor: pointer;
+            box-shadow: 5px 5px 5px gray;
+            border-color: black;
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: royalblue;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<!-- Main HTML Code -->
+
+<body>
+    <header class="banner">
+        <h1>Car Price Prediction</h1>
+    </header>
+    </div>
+    <main>
+        <div class="main">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label for="wheelbase">Wheel Base</label>
+                <br>
+                <input required type="text" name="wheelbase" class="wheelbase" placeholder="Enter Value"></input>
+                <br>
+                <label for="carlength">Car Length</label>
+                <br>
+                <input required type="text" name="carlength" class="carlength" placeholder="Enter Value"></input>
+                <br>
+                <label for="carwidth">Car Width</label>
+                <br>
+                <input required type="text" name="carwidth" class="carwidth" placeholder="Enter Value"></input>
+                <br>
+                <label for="carheight">Car Height</label>
+                <br>
+                <input required type="text" name="carheight" class="carheight" placeholder="Enter Value"></input>
+                <br>
+                <label for="curbweight">Curb Weight</label>
+                <br>
+                <input required type="text" name="curbweight" class="curbweight" placeholder="Enter Value"></input>
+                <br>
+                <label for="enginesize">Engine Size</label>
+                <br>
+                <input required type="text" name="enginesize" class="enginesize" placeholder="Enter Value"></input>
+                <br>
+                <label for="boreratio">Bore Ratio</label>
+                <br>
+                <input required type="text" name="boreratio" class="boreratio" placeholder="Enter Value"></input>
+                <br>
+                <label for="stroke">Stroke</label>
+                <br>
+                <input required type="text" name="stroke" class="stroke" placeholder="Enter Value"></input>
+                <br>
+                <label for="compressionratio">Compression Ratio</label>
+                <br>
+                <input required type="text" name="compressionratio" class="compressionratio" placeholder="Enter Value"></input>
+                <br>
+                <label for="horsepower">Horse Power</label>
+                <br>
+                <input required type="text" name="horsepower" class="horsepower" placeholder="Enter Value"></input>
+                <br>
+                <label for="peakrpm">Peak RPM</label>
+                <br>
+                <input required type="text" name="peakrpm" class="peakrpm" placeholder="Enter Value"></input>
+                <br>
+                <label for="citympg">City MPG</label>
+                <br>
+                <input required type="text" name="citympg" class="citympg" placeholder="Enter Value"></input>
+                <br>
+                <label for="highwaympg">Highway MPG</label>
+                <br>
+                <input required type="text" name="highwaympg" class="highwaympg" placeholder="Enter Value"></input>
+                <br>
+                <div class="button"> 
+                    <button type="submit">Predict</button> 
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="prediction">
+        {% if price%}
+        <h1>
+            Estimated Value : {{price}}
+        </h1>
+        {% endif %}
+    </div>
+</body>
+
+</html>
