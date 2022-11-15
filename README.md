@@ -13,3 +13,23 @@ After opening the command prompt, run the below command:
 ```
 python ./manage.py runserver
 ```
+
+In case of any error, first run: 
+
+
+```
+python ./manage.py migrate
+```
+
+Then run :
+
+```
+python ./manage.py runserver
+```
+
+Imports Required : 
+Make sure that you have downloaded the following modules : 
+
+1. Django
+2. Numpy
+3. Sklearn
