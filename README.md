@@ -33,3 +33,12 @@ Make sure that you have downloaded the following modules :
 1. Django
 2. Numpy
 3. Sklearn
+4. Joblib
+
+If these modules are not installed you may get the respective errors,
+
+Django : The backend will not run and you will not get the port link.
+Numpy & Sklearn : The preprocessing will not take place. 
+Joblib : This is used for loading the model, so without this model will not exist.
+
+Hope You enjoyed. 
